@@ -1,20 +1,17 @@
 
-# 📦 API REST - Lojinha (Produtos e Clientes)
+# Lojinha (Produtos e Clientes)
 
-API REST desenvolvida com Node.js, seguindo o padrão MVC, usando Restify, MySQL e Knex.js.
+API desenvolvida com Node.js, seguindo o padrão MVC.
 
----
-
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - Node.js
 - Restify
 - MySQL
 - Knex.js
 
----
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 src/
@@ -32,17 +29,7 @@ src/
 server.js
 ```
 
----
-
-## 📌 Pré-requisitos
-
-- Node.js instalado
-- MySQL rodando localmente
-- Banco de dados `loja` criado
-
----
-
-## 🧱 Script para o Banco de Dados
+## Script para o Banco de Dados
 
 ```sql
 CREATE DATABASE IF NOT EXISTS loja;
@@ -65,28 +52,9 @@ CREATE TABLE cliente (
 
 ---
 
-## ▶️ Executando a aplicação
+## Endpoints disponíveis
 
-1. Instale as dependências:
-   ```bash
-   npm install
-   ```
-
-2. Inicie o servidor:
-   ```bash
-   node server.js
-   ```
-
-3. Acesse a API:
-   ```
-   http://localhost:8001
-   ```
-
----
-
-## 🔁 Endpoints disponíveis
-
-### 📦 Produtos
+### Produtos
 
 - `GET /produto` → Lista todos os produtos
 - `GET /produto/:idProd` → Retorna um produto pelo ID
@@ -94,7 +62,7 @@ CREATE TABLE cliente (
 - `PUT /produto/:idProd` → Atualiza um produto
 - `DELETE /produto/:idProd` → Deleta um produto
 
-### 👤 Clientes
+### Clientes
 
 - `GET /cliente` → Lista todos os clientes
 - `GET /cliente/:idCli` → Retorna um cliente pelo ID
@@ -104,7 +72,7 @@ CREATE TABLE cliente (
 
 ---
 
-## 💡 Exemplo de requisição com JSON (POST /cliente)
+## Exemplo de requisição com JSON (POST /cliente)
 
 ```json
 {
@@ -115,7 +83,3 @@ CREATE TABLE cliente (
 ```
 
 ---
-
-## 🤝 Autor
-
-Danielle – para atividade de Sistemas Distribuídos e Mobile
