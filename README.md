@@ -1,85 +1,24 @@
+Ficha Resumo sobre o padrão Model-View-Controller.
 
-# Lojinha (Produtos e Clientes)
+# Introdução
+Na construção de APIs REST utilizando Node.js, o uso de padrões de projeto é fundamental para garantir organização, escalabilidade e manutenibilidade do código. Um dos padrões mais adotados é o MVC (Model-View-Controller).
 
-API desenvolvida com Node.js, seguindo o padrão MVC.
+# O que é o Padrão MVC?
+O padrão MVC divide a aplicação em três camadas principais:
+Model (Modelo): Responsável pela manipulação dos dados e conexão com o banco de dados.
+View (Visualização): Responsável pela apresentação dos dados. No caso de APIs, essa camada geralmente é substituída pelas respostas em JSON.
+Controller (Controlador): Responsável pela lógica de negócio, recebendo as requisições e enviando as respostas.
 
-## Tecnologias Utilizadas
+# Benefícios do uso do MVC
 
-- Node.js
-- Restify
-- MySQL
-- Knex.js
+Melhor organização do código;
+Separação clara de responsabilidades;
+Facilita testes e manutenção;
+Escalabilidade com múltiplos módulos.
 
+# Ferramentas utilizadas
 
-## Estrutura do Projeto
-
-```
-src/
-├── controllers/
-│   ├── clienteController.js
-│   └── produtoController.js
-├── models/
-│   ├── clienteModel.js
-│   └── produtoModel.js
-├── routes/
-│   ├── clienteRoutes.js
-│   └── produtoRoutes.js
-├── db.js
-├── app.js
-server.js
-```
-
-## Script para o Banco de Dados
-
-```sql
-CREATE DATABASE IF NOT EXISTS loja;
-
-USE loja;
-
-CREATE TABLE produto (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  nome VARCHAR(100) NOT NULL,
-  preco DECIMAL(10, 2) NOT NULL
-);
-
-CREATE TABLE cliente (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  nome VARCHAR(100) NOT NULL,
-  email VARCHAR(100) NOT NULL UNIQUE,
-  telefone VARCHAR(20)
-);
-```
-
----
-
-## Endpoints disponíveis
-
-### Produtos
-
-- `GET /produto` → Lista todos os produtos
-- `GET /produto/:idProd` → Retorna um produto pelo ID
-- `POST /produto` → Cadastra um novo produto
-- `PUT /produto/:idProd` → Atualiza um produto
-- `DELETE /produto/:idProd` → Deleta um produto
-
-### Clientes
-
-- `GET /cliente` → Lista todos os clientes
-- `GET /cliente/:idCli` → Retorna um cliente pelo ID
-- `POST /cliente` → Cadastra um novo cliente
-- `PUT /cliente/:idCli` → Atualiza um cliente
-- `DELETE /cliente/:idCli` → Deleta um cliente
-
----
-
-## Exemplo de requisição com JSON (POST /cliente)
-
-```json
-{
-  "nome": "Danielle",
-  "email": "danielle@exemplo.com",
-  "telefone": "11999999999"
-}
-```
-
----
+Node.js: ambiente de execução JavaScript;
+Knex.js: query builder para conexão com MySQL;
+Restify: framework para construção de APIs REST;
+MySQL: banco de dados relacional.
